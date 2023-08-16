@@ -34,6 +34,7 @@ export const getSortedPostsData = (): PostData[] => {
 		}
 	});
 };
+
 export const getAllPostIds = () => {
 	const fileNames = fs.readdirSync(postsDirectory);
 	/* つぎのような配列が返される:

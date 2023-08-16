@@ -3,15 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
+import { FC } from 'react'
 
-const name = 'REI NARUSE';
 export const siteTitle = 'Next.js Sample Website';
 type Props = {
 	home?: boolean;
 };
 // const Layout: FC<Props> = ({ children }) => {
 const Layout: FC<Props> = ({ children, home }) => {
-	// return <div className={styles.container}>{children}</div>;
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -40,7 +39,6 @@ const Layout: FC<Props> = ({ children, home }) => {
 							width={144}
 							alt=""
 						/>
-						<h1 className={utilStyles.heading2Xl}>{name}</h1>
 					</>
 				) : (
 					<>
@@ -54,15 +52,10 @@ const Layout: FC<Props> = ({ children, home }) => {
 								alt=""
 							/>
 						</Link>
-						<h2 className={utilStyles.headingLg}>
-							<Link href="/" className={utilStyles.colorInherit}>
-								{name}
-							</Link>
-						</h2>
 					</>
 				)}
 			</header>
-			<main>{children}</main>
+			<main className={styles.main}>{children}</main>
 			{!home && (
 				<div className={styles.backToHome}>
 					<Link href="/">← Back to home</Link>

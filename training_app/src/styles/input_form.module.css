@@ -1,0 +1,16 @@
+.form_row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+.form_row label {
+    width: 120px; /* 調整可能な幅 */
+    margin-right: 10px;
+    text-align: right;
+}
+
+.form_row input {
+    flex: 1;
+    padding: 5px;
+}
