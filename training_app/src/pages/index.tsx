@@ -4,6 +4,7 @@ import { getSortedPostsData } from '../lib/posts';
 import type { PostData } from '../lib/posts';
 import utilStyles from '../styles/utils.module.css';
 import inputStyles from '../styles/input_form.module.css'
+import Link from 'next/link';
 
 type Props = {
 	allPostsData: PostData[];
@@ -32,6 +33,7 @@ export default function Home({ allPostsData }: Props) {
         <input type="password" id="password"></input>
       </div>
 			</section>
+      <Link href='/select'>skip</Link>
 		</Layout>
 	);
 }
